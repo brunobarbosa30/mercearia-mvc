@@ -19,11 +19,11 @@ class Estoque:
 
 
 class Venda:
-    def __init__(self, itensVendido: Produtos, vendedor, comprador, qntdVendida, data = datetime.now()):
+    def __init__(self, itensVendido: Produtos, vendedor, comprador, quantidadeVendida, data = datetime.now().strftime("%d/%m/%y")):
         self.itensVendido = itensVendido
         self.vendedor = vendedor
         self.comprador = comprador
-        self.qntdVendida = qntdVendida
+        self.qntdVendida = quantidadeVendida
         self.data = data
 
 
@@ -48,8 +48,3 @@ class Funcionario(Pessoa):
     def __init__(self, clt, nome, telefone, cpf, email, endereco):
         self.clt = clt
         super(Funcionario, self).__init__(nome, telefone, cpf, email, endereco)
-
-
-
-        
-
